@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BetterBlockBreaking.iml" filepath="$PROJECT_DIR$/BetterBlockBreaking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/BetterBlockBreaking-core.iml" filepath="$PROJECT_DIR$/core/BetterBlockBreaking-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dist/BetterBlockBreaking-dist.iml" filepath="$PROJECT_DIR$/dist/BetterBlockBreaking-dist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spigot-1.16.5/BetterBlockBreaking-spigot-1.16.iml" filepath="$PROJECT_DIR$/spigot-1.16.5/BetterBlockBreaking-spigot-1.16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spigot-1.19/BetterBlockBreaking-spigot-1.19.iml" filepath="$PROJECT_DIR$/spigot-1.19/BetterBlockBreaking-spigot-1.19.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spigot-1.20/BetterBlockBreaking-spigot-1.20.iml" filepath="$PROJECT_DIR$/spigot-1.20/BetterBlockBreaking-spigot-1.20.iml" />
+    </modules>
+  </component>
+</project>

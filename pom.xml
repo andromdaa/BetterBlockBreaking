@@ -1,102 +1,147 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.github.cheesesoftware</groupId>
-  <artifactId>BetterBlockBreaking</artifactId>
-  <version>6.6.0-1.15</version>
-  <build>
-    <sourceDirectory>src/main/java</sourceDirectory>
-    <resources>
-                        <resource>
-                                <targetPath>.</targetPath>
-                                <filtering>true</filtering>
-                                <directory>src/main/resources</directory>
-                                <includes>
-                                        <include>plugin.yml</include>
-                                        <include>config.yml</include>
-                                </includes>
-                        </resource>
-    </resources>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-        <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-  
-        <repositories>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.andromda</groupId>
+    <artifactId>BetterBlockBreaking</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>core</module>
+        <module>spigot-1.16</module>
+        <module>spigot-1.19</module>
+        <module>spigot-1.20</module>
+        <module>dist</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <repositories>
+        <!-- Spigot API -->
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+
+        <repository>
+            <id>sonatype</id>
+            <url>https://oss.sonatype.org/content/groups/public/</url>
+        </repository>
+        <!-- Spigot API -->
+
+        <!-- Bukkit API -->
+        <repository>
+            <id>bukkit-repo</id>
+            <url>http://repo.bukkit.org/content/groups/public/</url>
+        </repository>
+        <!-- Bukkit API -->
+
+        <!-- Bossbar API -->
+        <repository>
+            <id>confuser-repo</id>
+            <url>http://ci.frostcast.net/plugin/repository/everything</url>
+        </repository>
+        <!-- Bossbar API -->
+
+        <!-- CraftBukkit API -->
+        <repository>
+            <id>craftbukkit-repo</id>
+            <url>http://maven.sk89q.com/repo/</url>
+        </repository>
+        <!-- CraftBukkit API -->
+
+        <!-- ProtocolLib -->
         <repository>
             <id>dmulloy2-repo</id>
-            <url>http://repo.dmulloy2.net/content/groups/public/</url>
+            <url>https://repo.dmulloy2.net/repository/public/</url>
         </repository>
-                <repository>
-                        <id>spigot-repo</id>
-                        <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
-                </repository>
-                <repository>
-                        <id>md_5-repo</id>
-                        <url>http://repo.md-5.net/content/groups/public/</url>
-                </repository>
-                <repository>
-                        <id>confuser-repo</id>
-                        <url>http://ci.frostcast.net/plugin/repository/everything</url>
-                </repository>
-                <repository>
-                        <id>bukkit-repo</id>
-                        <url>http://repo.bukkit.org/content/groups/public/</url>
-                </repository>
-                <repository>
-                        <id>craftbukkit-repo</id>
-                        <url>http://maven.sk89q.com/repo/</url>
-                </repository>
-                <repository>
-                        <id>drkmatr1984-repo</id>
-                        <url>https://minevolt.net/repo/</url>
-                </repository>
-            <repository>
-                <id>sk89q-repo</id>
-                <url>http://maven.sk89q.com/repo/</url>
+        <!-- ProtocolLib -->
+
+        <!-- Slimefun4 -->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
-        </repositories>
-        
-        <dependencies>
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.15-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot</artifactId>
-            <version>1.15-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
+        <!-- Slimefun4 -->
+
+        <!-- Towny -->
+        <repository>
+            <id>glaremasters repo</id>
+            <url>https://repo.glaremasters.me/repository/towny/</url>
+        </repository>
+        <!-- Towny -->
+
+        <!-- WorldGuard -->
+        <repository>
+            <id>sk89q-repo</id>
+            <url>https://maven.enginehub.org/repo/</url>
+        </repository>
+        <!-- WorldGuard -->
+    </repositories>
+
+    <dependencies>
         <dependency>
             <groupId>com.comphenix.protocol</groupId>
             <artifactId>ProtocolLib</artifactId>
-            <version>4.5.0-SNAPSHOT</version>
+            <version>5.1.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.sk89q.worldguard</groupId>
             <artifactId>worldguard-bukkit</artifactId>
-            <version>7.0.2-SNAPSHOT</version>
+            <version>7.0.5</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.TheBusyBiscuit</groupId>
+            <groupId>com.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>4.1.15</version>
+            <version>RC-37</version>
         </dependency>
         <dependency>
             <groupId>com.palmergames.bukkit.towny</groupId>
-            <artifactId>Towny</artifactId>
-            <version>0.95.1.7</version>
+            <artifactId>towny</artifactId>
+            <version>0.100.2.0</version>
+            <scope>provided</scope>
         </dependency>
-        </dependencies>
+    </dependencies>
+
 </project>

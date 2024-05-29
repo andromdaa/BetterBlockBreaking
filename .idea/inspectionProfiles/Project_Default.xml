@@ -1,0 +1,32 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="LanguageDetectionInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="VulnerableCodeUsages" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="VulnerableLibrariesGlobal" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="VulnerableLibrariesLocal" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="isIgnoringEnabled" value="true" />
+      <option name="ignoredModules">
+        <list>
+          <option value="BetterBlockBreaking" />
+          <option value="BetterBlockBreaking" />
+          <option value="BetterBlockBreaking" />
+        </list>
+      </option>
+      <option name="ignoredPackages">
+        <list>
+          <option value="com.google.code.gson:gson:2.8.0" />
+          <option value="com.google.guava:guava:21.0" />
+          <option value="org.yaml:snakeyaml:1.27" />
+        </list>
+      </option>
+      <option name="ignoredReasons">
+        <list>
+          <option value="Other" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
