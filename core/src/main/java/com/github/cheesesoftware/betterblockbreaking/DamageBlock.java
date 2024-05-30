@@ -1,4 +1,4 @@
-package com.andromda.betterblockbreaking;
+package com.github.cheesesoftware.betterblockbreaking;
 
 import java.lang.reflect.Field;
 import java.util.Date;

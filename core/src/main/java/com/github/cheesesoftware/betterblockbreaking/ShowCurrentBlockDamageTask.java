@@ -1,4 +1,4 @@
-package com.andromda.betterblockbreaking;
+package com.github.cheesesoftware.betterblockbreaking;
 
 import java.util.Date;
 

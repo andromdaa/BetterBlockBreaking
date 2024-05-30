@@ -1,4 +1,4 @@
-package com.andromda.betterblockbreaking;
+package com.github.cheesesoftware.betterblockbreaking;
 
 import net.minecraft.server.v1_15_R1.BlockPosition;
 import net.minecraft.server.v1_15_R1.PacketPlayOutBlockBreakAnimation;
